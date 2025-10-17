@@ -41,7 +41,7 @@ export default function Home() {
         <h2 className="text-3xl md:text-4xl font-semibold">What Is Prediction.bet?</h2>
         <p className="opacity-80">
           Prediction.bet is a once-in-a-generation domain positioned at the nexus of prediction markets, blockchain, and AI.
-          It's not just a name — it's the headquarters of the Prediction Economy.
+          It&apos;s not just a name — it&apos;s the headquarters of the Prediction Economy.
         </p>
       </motion.section>
 
@@ -135,7 +135,7 @@ export default function Home() {
               console.log("Contact form response:", result);
               
               if (response.ok && result.ok) {
-                alert("Thanks — we'll be in touch.");
+                alert("Thanks — we&apos;ll be in touch.");
                 form.reset();
               } else {
                 console.error("Contact form error:", result);

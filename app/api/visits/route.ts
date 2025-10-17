@@ -82,7 +82,7 @@ export async function POST() {
     name: "pred_visit_24h",
     value: "1",
     httpOnly: true,
-    sameSite: "Lax",
+    sameSite: "lax",
     secure: true,
     path: "/",
     expires: expiresInDays(1),
