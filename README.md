@@ -31,7 +31,7 @@ A premium, single-page site for Prediction.bet that positions the domain as a se
    ```
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url_here
    SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
-   RESEND_API_KEY=your_resend_api_key_here
+   SENDGRID_API_KEY=your_sendgrid_api_key_here
    ```
 
 3. **Set up Supabase database**:
@@ -102,7 +102,7 @@ A premium, single-page site for Prediction.bet that positions the domain as a se
    - Add these variables:
      - `NEXT_PUBLIC_SUPABASE_URL` = your_supabase_url
      - `SUPABASE_SERVICE_ROLE_KEY` = your_service_role_key
-     - `RESEND_API_KEY` = your_resend_api_key
+     - `SENDGRID_API_KEY` = your_sendgrid_api_key
 
 4. **Deploy**:
    - Click "Deploy"

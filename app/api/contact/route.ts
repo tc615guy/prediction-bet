@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import sgMail from "@sendgrid/mail";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
 export async function POST(req: Request) {
   try {
@@ -11,9 +11,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // Check if Resend API key is configured
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === "your_resend_api_key_here") {
-      console.log("Resend API key not configured, logging contact inquiry:");
+    // Check if SendGrid API key is configured
+    if (!process.env.SENDGRID_API_KEY || process.env.SENDGRID_API_KEY === "your_sendgrid_api_key_here") {
+      console.log("SendGrid API key not configured, logging contact inquiry:");
       console.log("Name:", body.name);
       console.log("Email:", body.email);
       console.log("Message:", body.message);
@@ -22,9 +22,9 @@ export async function POST(req: Request) {
     }
 
     // Send email to joshlanius@yahoo.com
-    const { data, error } = await resend.emails.send({
-      from: "Prediction.bet <noreply@prediction.bet>",
-      to: ["joshlanius@yahoo.com"],
+    const msg = {
+      to: "joshlanius@yahoo.com",
+      from: "noreply@prediction.bet",
       subject: `New Contact Inquiry from ${body.name}`,
       html: `
         <h2>New Contact Inquiry from Prediction.bet</h2>
@@ -35,10 +35,14 @@ export async function POST(req: Request) {
         <hr>
         <p><em>Sent from Prediction.bet contact form</em></p>
       `,
-    });
+    };
 
-    if (error) {
-      console.error("Resend error:", error);
+    try {
+      await sgMail.send(msg);
+      console.log("Email sent successfully via SendGrid");
+      return NextResponse.json({ ok: true, message: "Email sent successfully" });
+    } catch (error) {
+      console.error("SendGrid error:", error);
       // Log the contact inquiry as fallback
       console.log("=== FALLBACK: Contact inquiry logged due to email error ===");
       console.log("Name:", body.name);
@@ -48,9 +52,6 @@ export async function POST(req: Request) {
       console.log("========================================================");
       return NextResponse.json({ ok: true, message: "Contact logged (email service error)" });
     }
-
-    console.log("Email sent successfully:", data);
-    return NextResponse.json({ ok: true, messageId: data?.id });
     
   } catch (error) {
     console.error("Contact form error:", error);
