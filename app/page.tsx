@@ -1,5 +1,4 @@
 "use client";
-import VisitCounter from "./components/VisitCounter";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -21,13 +20,6 @@ export default function Home() {
         <p className="mt-6 max-w-2xl text-lg md:text-xl opacity-80">
           The category-defining brand for prediction markets, decentralized betting, and AI forecasting.
         </p>
-        <VisitCounter label="Total Visits:" />
-        <a
-          href="#inquire"
-          className="mt-10 rounded-full border px-6 py-3 text-base hover:opacity-80 transition"
-        >
-          Inquire About Acquisition
-        </a>
       </motion.section>
 
       {/* About */}
