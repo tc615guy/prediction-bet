@@ -111,49 +111,16 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="mx-auto max-w-3xl px-6 py-20"
+        className="mx-auto max-w-3xl px-6 py-20 text-center"
       >
         <h2 className="text-3xl md:text-4xl font-semibold mb-6">Serious Inquiries Only</h2>
-        <form
-          className="space-y-4"
-          onSubmit={async (e) => {
-            e.preventDefault();
-            const form = e.currentTarget as HTMLFormElement;
-            const fd = new FormData(form);
-            const payload = Object.fromEntries(fd.entries());
-            
-            try {
-              const response = await fetch("/api/contact", { 
-                method: "POST", 
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(payload) 
-              });
-              
-              const result = await response.json();
-              console.log("Contact form response:", result);
-              
-              if (response.ok && result.ok) {
-                alert("Thanks — we&apos;ll be in touch.");
-                form.reset();
-              } else {
-                console.error("Contact form error:", result);
-                alert("Sorry, there was an error sending your message. Please try again.");
-              }
-            } catch (error) {
-              console.error("Contact form error:", error);
-              alert("Sorry, there was an error sending your message. Please try again.");
-            }
-          }}
+        <p className="text-lg opacity-80 mb-4">Contact us regarding purchase inquiries:</p>
+        <a 
+          href="mailto:thecryptoguy615@yahoo.com"
+          className="text-xl text-yellow-400 hover:text-yellow-500 transition"
         >
-          <input name="name" placeholder="Name" required className="w-full rounded-xl bg-transparent border p-3" suppressHydrationWarning/>
-          <input name="email" type="email" placeholder="Email" required className="w-full rounded-xl bg-transparent border p-3" suppressHydrationWarning/>
-          <textarea name="message" placeholder="Message" required className="w-full rounded-xl bg-transparent border p-3 h-32" suppressHydrationWarning/>
-          <button className="rounded-xl border px-6 py-3 hover:opacity-80 transition" type="submit" suppressHydrationWarning>Send</button>
-        </form>
-        <div className="mt-6 opacity-80 space-y-1">
-        </div>
+          thecryptoguy615@yahoo.com
+        </a>
       </motion.section>
 
       <footer className="border-t border-white/10 py-10 text-center opacity-70">
