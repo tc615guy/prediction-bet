@@ -1,4 +1,19 @@
 {
   "buildCommand": "",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    { "source": "/pulse", "destination": "/", "permanent": true },
+    { "source": "/pulse/:path*", "destination": "/", "permanent": true },
+    { "source": "/compare", "destination": "/", "permanent": true },
+    { "source": "/compare/:path*", "destination": "/", "permanent": true },
+    { "source": "/platforms", "destination": "/", "permanent": true },
+    { "source": "/platforms/:path*", "destination": "/", "permanent": true },
+    { "source": "/tools", "destination": "/", "permanent": true },
+    { "source": "/tools/:path*", "destination": "/", "permanent": true },
+    { "source": "/quiz", "destination": "/", "permanent": true },
+    { "source": "/quiz/:path*", "destination": "/", "permanent": true },
+    { "source": "/s/:path*", "destination": "/", "permanent": true },
+    { "source": "/go/:path*", "destination": "/", "permanent": true },
+    { "source": "/api/:path*", "destination": "/", "permanent": true }
+  ]
 }
