@@ -189,7 +189,7 @@
             <div class="grid-overlay"></div>
         </div>
 
-        <div class="contact-container" style="position: relative; z-index: 1;">
+        <div class="contact-container" style="position: relative; z-index: 100; isolation: isolate;">
             <!-- Left Column: Info -->
             <div class="contact-info">
                 <a href="index.html" class="back-link">
@@ -235,26 +235,47 @@
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and we'll get back to you promptly.</p>
 
-                <form id="contactForm" action="https://formspree.io/f/xgolkwyl" method="POST" class="contact-form" autocomplete="on">
+                <style>
+                    #contactForm input[type="text"],
+                    #contactForm input[type="email"],
+                    #contactForm input[type="tel"],
+                    #contactForm textarea,
+                    #contactForm select {
+                        pointer-events: auto !important;
+                        user-select: text !important;
+                        -webkit-user-select: text !important;
+                        cursor: text !important;
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                        position: relative !important;
+                        z-index: 9999 !important;
+                    }
+                    .contact-form-card {
+                        position: relative;
+                        z-index: 100;
+                        isolation: isolate;
+                    }
+                    .contact-form-card * {
+                        pointer-events: auto;
+                    }
+                </style>
+                <form id="contactForm" action="https://formspree.io/f/xgolkwyl" method="POST" autocomplete="on" style="display:flex;flex-direction:column;gap:20px;">
                     <input type="hidden" name="_subject" value="New Contact Message — prediction.bet">
-                    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden;">
-                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-                    </div>
 
                     <div class="form-group">
                         <label for="contact-name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="contact-name" name="name" placeholder="Your full name" required autocomplete="name">
+                        <input type="text" id="contact-name" name="name" placeholder="Your full name" required autocomplete="name" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
                     </div>
 
                     <div class="form-group">
                         <label for="contact-email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="contact-email" name="email" placeholder="you@company.com" required autocomplete="email">
+                        <input type="email" id="contact-email" name="email" placeholder="you@company.com" required autocomplete="email" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
                     </div>
 
                     <div class="form-group">
                         <label for="contact-subject">Subject <span class="required">*</span></label>
-                        <select id="contact-subject" name="subject" required style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 14px 16px; font-family: var(--font-primary); font-size: 1rem; color: var(--color-text); width: 100%; outline: none; cursor: pointer; transition: all var(--transition-fast);">
-                            <option value="" disabled selected style="color: var(--color-text-muted);">Select a subject</option>
+                        <select id="contact-subject" name="subject" required style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;cursor:pointer;">
+                            <option value="" disabled selected>Select a subject</option>
                             <option value="Domain Inquiry">Domain Inquiry</option>
                             <option value="Make an Offer">Make an Offer</option>
                             <option value="Partnership">Partnership Opportunity</option>
@@ -265,12 +286,12 @@
 
                     <div class="form-group">
                         <label for="contact-phone">Phone Number <span class="optional">(optional)</span></label>
-                        <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                        <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
                     </div>
 
                     <div class="form-group">
                         <label for="contact-message">Your Message <span class="required">*</span></label>
-                        <textarea id="contact-message" name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Tell us what's on your mind..." required style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;font-family:inherit;resize:vertical;"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-glow btn-large btn-full" id="contactSubmitBtn">
