@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — prediction.bet</title>
+    <meta name="description" content="Get in touch about acquiring the premium domain prediction.bet. All inquiries handled confidentially.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 24px 80px;
+        }
+
+        .contact-container {
+            max-width: 960px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-info {
+            position: sticky;
+            top: 120px;
+        }
+
+        .contact-info h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--color-text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .contact-info p strong {
+            color: var(--color-text);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .contact-detail:last-child {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(108, 92, 231, 0.1);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: var(--radius-sm);
+            color: var(--color-primary-light);
+            flex-shrink: 0;
+        }
+
+        .contact-detail-text h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 2px;
+        }
+
+        .contact-detail-text p {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0;
+        }
+
+        .contact-form-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+        }
+
+        .contact-form-card h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-form-card > p {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 28px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-primary-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            transition: all var(--transition-fast);
+        }
+
+        .back-link:hover {
+            color: var(--color-text);
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .contact-info {
+                position: static;
+            }
+
+            .contact-form-card {
+                padding: 28px;
+            }
+
+            .contact-hero {
+                padding: 100px 20px 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-prediction">prediction</span><span class="logo-dot">.</span><span class="logo-bet">bet</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#opportunity">Opportunity</a>
+                <a href="index.html#benefits">Benefits</a>
+                <a href="index.html#offer">Make an Offer</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html#opportunity">Opportunity</a>
+            <a href="index.html#benefits">Benefits</a>
+            <a href="index.html#offer">Make an Offer</a>
+            <a href="contact.html" class="nav-cta">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Background -->
+    <section class="contact-hero">
+        <div class="hero-bg-effects">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="contact-container" style="position: relative; z-index: 1;">
+            <!-- Left Column: Info -->
+            <div class="contact-info">
+                <a href="index.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Back to Home
+                </a>
+                <h1>Let's Talk About <span class="text-gradient">prediction.bet</span></h1>
+                <p>Whether you have a question, want to discuss pricing, or are ready to make an offer — we'd love to hear from you. All conversations are kept <strong>strictly confidential</strong>.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>Response Time</h4>
+                        <p>We typically respond within 24-48 hours</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>Secure & Confidential</h4>
+                        <p>Your information is never shared with third parties</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="contact-detail-text">
+                        <h4>Professional Negotiation</h4>
+                        <p>We work with you to find the right deal structure</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="contact-form-card">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and we'll get back to you promptly.</p>
+
+                <form id="contactForm" action="https://formspree.io/f/xgolkwyl" method="POST" class="contact-form">
+                    <input type="hidden" name="_subject" value="New Contact Message — prediction.bet">
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <div class="form-group">
+                        <label for="contact-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="contact-name" name="name" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="contact-email" name="email" placeholder="you@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject">Subject <span class="required">*</span></label>
+                        <select id="contact-subject" name="subject" required style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 14px 16px; font-family: var(--font-primary); font-size: 1rem; color: var(--color-text); width: 100%; outline: none; cursor: pointer; transition: all var(--transition-fast);">
+                            <option value="" disabled selected style="color: var(--color-text-muted);">Select a subject</option>
+                            <option value="Domain Inquiry">Domain Inquiry</option>
+                            <option value="Make an Offer">Make an Offer</option>
+                            <option value="Partnership">Partnership Opportunity</option>
+                            <option value="General Question">General Question</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number <span class="optional">(optional)</span></label>
+                        <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Your Message <span class="required">*</span></label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-glow btn-large btn-full" id="contactSubmitBtn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading" style="display:none;">
+                            <svg class="spinner" width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg>
+                            Sending...
+                        </span>
+                    </button>
+                </form>
+
+                <div id="contactSuccess" class="form-success" style="display:none; margin-top: 0;">
+                    <div class="success-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for reaching out. We'll review your message and get back to you within 24-48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-prediction">prediction</span><span class="logo-dot">.</span><span class="logo-bet">bet</span>
+                </div>
+                <p class="footer-text">This premium domain is available for acquisition. All inquiries are handled confidentially.</p>
+                <div class="footer-divider"></div>
+                <p class="footer-copyright">&copy; 2026 prediction.bet &mdash; All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            // Force scrolled state on load if already scrolled
+            if (window.pageYOffset > 50) navbar.classList.add('scrolled');
+
+            // Mobile menu
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenuBtn.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenuBtn.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                    });
+                });
+            }
+
+            // Contact form handling
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const successDiv = document.getElementById('contactSuccess');
+
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const btnLoading = submitBtn.querySelector('.btn-loading');
+
+                    btnText.style.display = 'none';
+                    btnLoading.style.display = 'inline-flex';
+                    submitBtn.disabled = true;
+
+                    try {
+                        const formData = new FormData(form);
+                        const response = await fetch(form.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+
+                        if (response.ok) {
+                            form.style.display = 'none';
+                            successDiv.style.display = 'block';
+                            successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else {
+                            throw new Error('Submission failed');
+                        }
+                    } catch (err) {
+                        alert('We\'re having trouble sending your message. Please try again shortly.');
+                        btnText.style.display = 'inline-flex';
+                        btnLoading.style.display = 'none';
+                        submitBtn.disabled = false;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
