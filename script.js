@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         selectors.forEach(selector => {
             document.querySelectorAll(selector).forEach(el => {
+                // Skip reveal animation for elements inside the offer/contact form section
+                if (el.closest('.offer-section') || el.closest('.contact-hero')) return;
                 if (!el.classList.contains('reveal')) {
                     el.classList.add('reveal');
                 }
