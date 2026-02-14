@@ -263,29 +263,31 @@
                 <p class="section-subtitle">Interested in acquiring <strong>prediction.bet</strong>? Fill out the form below with your details and offer. All inquiries are handled confidentially and professionally.</p>
             </div>
             <div class="form-wrapper">
-                <form id="offerForm" action="https://formspree.io/f/xgolkwyl" method="POST" class="offer-form">
+                <form id="offerForm" action="https://formspree.io/f/xgolkwyl" method="POST" class="offer-form" autocomplete="on">
                     <input type="hidden" name="_subject" value="New Offer for prediction.bet">
-                    <input type="text" name="_gotcha" style="display:none">
+                    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden;">
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="company">Company / Organization</label>
-                            <input type="text" id="company" name="company" placeholder="Your Company Inc.">
+                            <input type="text" id="company" name="company" placeholder="Your Company Inc." autocomplete="organization">
                         </div>
                         <div class="form-group">
                             <label for="offer">Your Offer (USD) <span class="required">*</span></label>
                             <div class="input-with-icon">
                                 <span class="input-icon">$</span>
-                                <input type="text" id="offer" name="offer" placeholder="Enter your offer amount" required>
+                                <input type="text" id="offer" name="offer" placeholder="Enter your offer amount" required autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -295,7 +297,7 @@
                     </div>
                     <div class="form-group full-width">
                         <label for="phone">Phone Number <span class="optional">(optional)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
                     </div>
                     <button type="submit" class="btn btn-primary btn-glow btn-large btn-full" id="submitBtn">
                         <span class="btn-text">Submit Offer</span>

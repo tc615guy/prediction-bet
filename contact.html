@@ -235,18 +235,20 @@
                 <h2>Send Us a Message</h2>
                 <p>Fill out the form below and we'll get back to you promptly.</p>
 
-                <form id="contactForm" action="https://formspree.io/f/xgolkwyl" method="POST" class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/xgolkwyl" method="POST" class="contact-form" autocomplete="on">
                     <input type="hidden" name="_subject" value="New Contact Message — prediction.bet">
-                    <input type="text" name="_gotcha" style="display:none">
+                    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden;">
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
 
                     <div class="form-group">
                         <label for="contact-name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="contact-name" name="name" placeholder="Your full name" required>
+                        <input type="text" id="contact-name" name="name" placeholder="Your full name" required autocomplete="name">
                     </div>
 
                     <div class="form-group">
                         <label for="contact-email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="contact-email" name="email" placeholder="you@company.com" required>
+                        <input type="email" id="contact-email" name="email" placeholder="you@company.com" required autocomplete="email">
                     </div>
 
                     <div class="form-group">
@@ -263,7 +265,7 @@
 
                     <div class="form-group">
                         <label for="contact-phone">Phone Number <span class="optional">(optional)</span></label>
-                        <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000">
+                        <input type="tel" id="contact-phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
                     </div>
 
                     <div class="form-group">
