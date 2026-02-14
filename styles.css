@@ -860,11 +860,15 @@ img {
 .offer-section {
     background: var(--color-bg-secondary);
     border-top: 1px solid var(--color-border);
+    position: relative;
+    z-index: 10;
 }
 
 .form-wrapper {
     max-width: 720px;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .offer-form {
@@ -908,7 +912,8 @@ img {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
@@ -916,9 +921,15 @@ img {
     font-family: var(--font-primary);
     font-size: 1rem;
     color: var(--color-text);
-    transition: all var(--transition-fast);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
     width: 100%;
     outline: none;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    z-index: 1;
 }
 
 .form-group input::placeholder,

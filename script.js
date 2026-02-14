@@ -47,8 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '.stat-card',
             '.benefit-card',
             '.urgency-card',
-            '.section-header',
-            '.form-wrapper'
+            '.section-header'
         ];
 
         selectors.forEach(selector => {
