@@ -254,88 +254,48 @@
         </div>
     </section>
 
-    <!-- Force form interactivity -->
-    <style>
-        #offerForm input[type="text"],
-        #offerForm input[type="email"],
-        #offerForm input[type="tel"],
-        #offerForm textarea {
-            pointer-events: auto !important;
-            user-select: text !important;
-            -webkit-user-select: text !important;
-            cursor: text !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-            position: relative !important;
-            z-index: 9999 !important;
-        }
-        #offer-section-wrapper {
-            position: relative;
-            z-index: 100;
-            isolation: isolate;
-        }
-        #offer-section-wrapper * {
-            pointer-events: auto;
-        }
-    </style>
-
     <!-- Offer / Contact Section -->
     <section class="section offer-section" id="offer">
-        <div class="container" id="offer-section-wrapper">
-            <div style="text-align:center;max-width:720px;margin:0 auto 64px;">
+        <div class="container">
+            <div class="section-header" style="opacity:1;transform:none;pointer-events:auto;">
                 <span class="section-label">Make Your Move</span>
                 <h2 class="section-title">Submit Your <span class="text-gradient">Offer</span></h2>
                 <p class="section-subtitle">Interested in acquiring <strong>prediction.bet</strong>? Fill out the form below with your details and offer. All inquiries are handled confidentially and professionally.</p>
             </div>
             <div class="form-wrapper">
-                <form id="offerForm" action="https://formspree.io/f/xgolkwyl" method="POST" autocomplete="on" style="display:flex;flex-wrap:wrap;gap:20px;">
+                <form id="my-form" action="https://formspree.io/f/xgolkwyl" method="POST">
                     <input type="hidden" name="_subject" value="New Offer for prediction.bet">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Full Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required autocomplete="name" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="company">Company / Organization</label>
-                            <input type="text" id="company" name="company" placeholder="Your Company Inc." autocomplete="organization" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
+                            <input type="text" id="company" name="company" placeholder="Your Company Inc.">
                         </div>
                         <div class="form-group">
-                            <label for="offer">Your Offer (USD) <span class="required">*</span></label>
-                            <div class="input-with-icon">
-                                <span class="input-icon" style="pointer-events:none;">$</span>
-                                <input type="text" id="offer" name="offer" placeholder="Enter your offer amount" required autocomplete="off" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px 14px 32px;font-size:1rem;color:#f0f0f5;width:100%;">
-                            </div>
+                            <label for="offer">Your Offer (USD) *</label>
+                            <input type="text" id="offer" name="offer" placeholder="$ Enter your offer amount" required>
                         </div>
                     </div>
                     <div class="form-group full-width">
                         <label for="message">Additional Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your plans for the domain, your timeline, or any questions you have..." style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;font-family:inherit;resize:vertical;min-height:120px;"></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your plans for the domain, your timeline, or any questions you have..."></textarea>
                     </div>
                     <div class="form-group full-width">
-                        <label for="phone">Phone Number <span class="optional">(optional)</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:14px 16px;font-size:1rem;color:#f0f0f5;width:100%;">
+                        <label for="phone">Phone Number (optional)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-glow btn-large btn-full" id="submitBtn">
-                        <span class="btn-text">Submit Offer</span>
-                        <span class="btn-loading" style="display:none;">
-                            <svg class="spinner" width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="30 70" stroke-linecap="round"/></svg>
-                            Sending...
-                        </span>
-                    </button>
+                    <button type="submit" id="my-form-button" class="btn btn-primary btn-glow btn-large btn-full">Submit Offer</button>
+                    <p id="my-form-status" style="text-align:center;margin-top:12px;color:#a29bfe;"></p>
                 </form>
-                <div id="formSuccess" class="form-success" style="display:none;">
-                    <div class="success-icon">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    </div>
-                    <h3>Offer Submitted Successfully!</h3>
-                    <p>Thank you for your interest in <strong>prediction.bet</strong>. We'll review your offer and get back to you within 24-48 hours.</p>
-                </div>
             </div>
         </div>
     </section>
